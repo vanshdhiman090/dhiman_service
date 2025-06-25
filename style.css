@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; /* Modern body font */
+    line-height: 1.7; /* Increased line height for readability */
+    margin: 0;
+    padding: 0;
+    background-color: #fdf5e6; /* Soft, warm background */
+    color: #444; /* Darker grey for better contrast */
+}
+
+header {
+    background: linear-gradient(to right, #ff7043, #ffb74d); /* Gradient orange header */
+    color: #fff;
+    padding: 2rem; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Softer shadow */
+}
+
+h1, h2, h3 {
+    color: #e64a19; /* Richer orange for headings */
+    font-family: 'Montserrat', sans-serif; /* Modern heading font */
+    margin-bottom: 15px; /* Added bottom margin */
+}
+
+h1 {
+    font-size: 2.5em; /* Larger main heading */
+}
+
+h2 {
+    font-size: 2em;
+    border-bottom: 2px solid #ff7043; /* Accent color underline */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+nav {
+    background: #f57f17; /* Darker orange for navigation */
+    color: #fff;
+    padding: 1rem; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #fff;
+    margin: 0 20px; /* Increased margin */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 1.1em; /* Slightly larger nav links */
+}
+
+nav a:hover {
+    color: #ffe0b2; /* Lighter orange on hover */
+    text-decoration: underline;
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto; /* Increased top/bottom margin */
+    overflow: hidden;
+    padding: 30px; /* Increased padding */
+    background-color: #fff; /* White background for content */
+    box-shadow: 0 0 15px rgba(0,0,0,0.08); /* Softer, larger shadow */
+    border-radius: 10px; /* More rounded corners */
+}
+
+.menu-section {
+    margin-bottom: 40px; /* Increased bottom margin */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0; /* Increased padding */
+    border-bottom: 1px dotted #ccc;
+    transition: background-color 0.3s ease; /* Hover effect */
+}
+
+.menu-item:last-child {
+    border-bottom: none; /* No border on the last item */
+}
+
+.menu-item:hover {
+    background-color: #fffaf0; /* Light hover background */
+}
+
+.menu-item span:first-child {
+    font-weight: bold;
+    color: #e64a19; /* Accent color for item name */
+}
+
+footer {
+    background: #f57f17; /* Darker orange for footer */
+    color: #fff;
+    text-align: center;
+    padding: 2rem; /* Increased padding */
+    margin-top: 40px; /* Increased top margin */
+}
+
+/* Image Styling */
+.container img {
+    display: block; /* Ensure image takes up its own line */
+    margin: 20px auto; /* Center images and add space */
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Slightly rounded corners for images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for images */
+}
+
+.menu-section img {
+    width: 100%; /* Make menu images fill the section width */
+    max-height: 250px; /* Set a max height for menu images */
+    object-fit: cover; /* Crop image to cover the area without distortion */
+    margin-bottom: 15px; /* Add space below menu images */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Slightly wider on smaller screens */
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 1em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .container img, .menu-section img, .contact-image img {
+        margin: 15px auto; /* Adjust image margin on smaller screens */
+    }
+
+    .menu-section img {
+        max-height: 200px; /* Further reduce max height for menu images */
+    }
+
+    .contact-image img {
+        max-height: 300px; /* Further reduce max height for contact image */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1.5rem;
+    }
+
+    nav {
+        padding: 0.8rem;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 0.9em;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .menu-item span:last-child {
+        margin-top: 5px;
+        font-size: 0.9em;
+        color: #444; /* Reset color for price on small screens */
+    }
+
+    .container img, .menu-section img, .contact-image img {
+        margin: 10px auto; /* Adjust image margin on very small screens */
+    }
+
+    .menu-section img {
+        max-height: 150px; /* Further reduce max height for menu images */
+    }
+
+    .contact-image img {
+        max-height: 250px; /* Further reduce max height for contact image */
+    }
+}
+
+/* Contact Page Specific Styles (Refined) */
+.contact-form {
+    margin-bottom: 30px; /* Increased margin */
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 8px; /* Increased margin */
+    font-weight: bold;
+    color: #e64a19; /* Accent color for labels */
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
+    border: 1px solid #ddd; /* Lighter border */
+    border-radius: 5px; /* Slightly more rounded */
+    box-sizing: border-box;
+    font-size: 1em;
+}
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #ff7043; /* Accent color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(255, 112, 67, 0.3); /* Subtle shadow on focus */
+}
+
+.contact-form button {
+    background-color: #ff7043; /* Accent color for button */
+    color: white;
+    padding: 12px 25px; /* Increased padding */
+    border: none;
+    border-radius: 5px; /* Slightly more rounded */
+    cursor: pointer;
+    font-size: 1.1em; /* Slightly larger font */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+.contact-form button:hover {
+    background-color: #e64a19; /* Darker accent color on hover */
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #eee;
+    margin-top: 30px; /* Increased margin */
+    text-align: center;
+    line-height: 400px;
+    font-size: 1.2em;
+    color: #555;
+    border-radius: 8px;
+    overflow: hidden; /* Hide potential overflow */
+}
